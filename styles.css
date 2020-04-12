@@ -112,7 +112,6 @@ body.light {
     margin: 0 1%;
     background-color: #252a41;
     border-radius: 5px;
-    border: none;
     width: 25%;
     padding: 3% 0;
 }
@@ -125,11 +124,7 @@ body.light {
 /* TOP GRID */
 
 #top-grid {
-    position: absolute;
-    top: 22%;
-    left: 9%;
-    right: 9%;
-    margin-bottom: 10%;
+
 }
 
 .facebook {
@@ -140,16 +135,37 @@ body.light {
     border-top: 3px solid #1ca0f2;
 }
 
+/* .instagram {
+       border-top:3px solid rgb(243, 242, 241);
+       border-radius: 5px;
+        border-image:
+        linear-gradient(to left,red, yellow) 
+        1 /
+        3px 0px 0px 0px /
+        0px 0px 0px 0px 
+        round
+       ;
+        position: relative;    
+} */
+
 .instagram {
-    background-size: 3px 100%;
-    background-position: 100% 0;
-
-background-repeat: no-repeat;
-
-    background-image: linear-gradient(to right, #fdc468, #ffa263, #ff806c, #f9607f, #df4996);
-
+    position: relative;
+    box-sizing: border-box;
+    margin: auto;
+    border-radius: 5px;
+    background-clip: padding-box;    
+    border-top: solid 3px transparent; /*#252a41*/    
 }
-
+ .instagram:after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -3px 0px 0px 0px; 
+      border-radius: 5px; 
+      background: linear-gradient(to right, red, rgb(59, 76, 134));
+    }
+  
 .youtube {
     border-top: 3px solid #c4032a;
 }
